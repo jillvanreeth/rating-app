@@ -1,8 +1,30 @@
+.rating {
+	padding: 15px 0;
+}
+
+.rating__inner {
+	display: flex;
+	flex-direction: row;
+	margin: 0 -2px;
+}
+
 .rating__symbol {
+	transition: opacity 250ms ease;
 	opacity: 0.1;
-	
-	svg path {
-		fill: none;
+	display: block;
+	width: 22px;
+	height: 18px;
+	padding: 0 2px;
+
+	svg {
+		display: block;
+		width: 100%;
+		height: 100%;
+
+		path {
+			fill: none;
+			transition: fill 250ms ease;
+		}
 	}
 	
 	&.is-visible  {

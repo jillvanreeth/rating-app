@@ -1,0 +1,18 @@
+[
+	{
+		"id": "1",
+		"visual": "bg-blizzak.jpg",
+		"visual_alignment": "-50px left",
+		"visual_size": "auto",
+		"text_alignment": "left",
+		"visual_repeat": "no-repeat"
+	},
+	{
+		"id": "2",
+		"visual": "bg-blizzak.jpg",
+		"visual_alignment": "center center",
+		"visual_size": "cover",
+		"text_alignment": "center",
+		"visual_repeat": "no-repeat"
+	}
+]

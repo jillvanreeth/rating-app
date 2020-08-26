@@ -17,6 +17,7 @@ export default {
 
 	data() {
 		return {
+			inputData: {},
 			rating: 0,
 			percentage: 0,
 		}
@@ -26,13 +27,13 @@ export default {
 
 		setRating(theRating) {
 			
-			this.rating = theRating
+			this.inputData.rating = theRating
 		
 		},
 
 		setPercentage(thePercentage) {
 		
-			this.percentage = thePercentage
+			this.inputData.percentage = thePercentage
 		
 		}
 	}

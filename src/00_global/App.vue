@@ -4,10 +4,9 @@
 		<main class="app__inner">
 
 			<section class="app__section">
-				<Banner 
-					:rating="rating" 
-					:percentage="percentage">
-				</Banner>	
+				<Banner :inputData="inputData" :id="1"></Banner>
+
+				<Banner :inputData="inputData" :id="2"></Banner>
 			
 				<RatingForm 
 					:rating="rating" 

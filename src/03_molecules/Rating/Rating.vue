@@ -1,9 +1,10 @@
 <template>
 	
 	<div class="rating">
-		
-		<div :class="[theRating >= n && 'is-visible','rating__symbol']" v-for="n in 5" :key="n">
-			<SymbolStar></SymbolStar>
+		<div class="rating__inner">
+			<div :class="['rating__symbol', theRating >= n && 'is-visible']" v-for="n in 5" :key="n">
+				<SymbolStar></SymbolStar>
+			</div>
 		</div>
 		
 	</div>
