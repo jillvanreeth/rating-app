@@ -1,0 +1,30 @@
+@function make-it-px($value) {
+	@if is-px($value) {
+		@return $value;
+	}
+
+	@return strip-unit($value) * 10px;
+}
+
+@function strip-unit($value) {
+	@return $value / ($value * 0 + 1);
+}
+
+@function is-px($value) {
+	@return index('px', unit($value)) != null;
+}
+
+@mixin media($size, $what: 'min-width', $offset: true) {
+  @if type-of($size) == 'string' {
+      $size: map-get($breakpoints, $size);
+  }
+
+  $size: make-it-px($size);
+  
+  @if $what == 'max-width' and $offset {
+      $size: $size - 1;
+  }
+  @media all and (#{$what}: $size) {
+      @content;
+  }
+}

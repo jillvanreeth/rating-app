@@ -2,7 +2,9 @@ module.exports = {
   pluginOptions: {
     'style-resources-loader': {
       preProcessor: 'scss',
-      patterns: []
+      patterns: [
+      	'src/01_fundaments/*/*.scss'
+      ]
     }
   }
 }
