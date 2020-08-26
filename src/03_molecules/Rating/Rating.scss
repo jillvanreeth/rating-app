@@ -1,0 +1,15 @@
+.rating__symbol {
+	opacity: 0.1;
+	
+	svg path {
+		fill: none;
+	}
+	
+	&.is-visible  {
+		opacity: 1;
+		
+		svg path {
+			fill: $accent-0;
+		}		
+	}
+}
