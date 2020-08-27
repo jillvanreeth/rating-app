@@ -1,13 +1,13 @@
 <template>
-	<div class="banner" v-bind:style="bannerStyles.visual">
-	<!-- <div class="banner" v-bind:style="{ backgroundImage: 'url(' + 'img/bg-blizzak.jpg' + ')' }"> -->
+	<div class="banner" >
+	
 		<div class="banner__inner">
 			
 			<div class="banner__graphic" :style="bannerStyles.visual"></div>
 
-			<header class="banner__content">
+			<header :class="['banner__content', bannerStyles.contentClass ? bannerStyles.contentClass.alignment : '']">
 				
-				<Rating :theRating="inputData.rating"></Rating>
+				<Rating :theRating="theRating"></Rating>
 
 				<h2 class="banner__title">
 					<span class="banner__title--highlight">{{thePercentage}}%</span> 

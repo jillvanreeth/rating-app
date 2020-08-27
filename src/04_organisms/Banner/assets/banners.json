@@ -1,10 +1,10 @@
 [
 	{
 		"id": "1",
-		"visual": "bg-blizzak.jpg",
-		"visual_alignment": "-50px left",
-		"visual_size": "auto",
-		"text_alignment": "left",
+		"visual": "tyre-full.png",
+		"visual_alignment": "-30px -70px",
+		"visual_size": "auto 100%",
+		"text_alignment": "right",
 		"visual_repeat": "no-repeat"
 	},
 	{

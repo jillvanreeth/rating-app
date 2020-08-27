@@ -18,32 +18,32 @@ export default {
 	data() {
 		return {
 			theId: this.id,
-			thePercentage: this.inputData.percentage ? this.inputData.percentage : 0,
+			thePercentage: this.inputData.percentage,
+			theRating: this.inputData.rating,
 			bannerData: bannerJSON,
 			bannerStyles: {},
 		}
 	},
 
 	watch: {
-		percentage: function() {
+		'inputData.percentage': {
+			handler() {
+				this.thePercentage = this.inputData.percentage
+				return this.thePercentage
+			}
+		},
 
-			this.inputData.thePercentage = this.inputData.percentage
-			return this.thePercentage
+		'inputData.rating':  {
+			handler() {
+				this.theRating = this.inputData.rating
+				return this.theRating
+			}	
 		}
 	},
 
 	mounted() {
 
-			console.log(this.bannerData)
-			
-			// for (var i = 0; i < this.bannerData.length; i++) { 
-			// 	if(this.bannerData[i].id == this.theId) { 
-			// 		console.log(this.theId,'found')
-			// 	} 
-			// }
-
 			let currentBanner = this.bannerData.find(elm => elm.id == this.theId)
-			console.log(currentBanner.id)
 			
 			this.bannerStyles = { 
 				visual: {
@@ -51,6 +51,9 @@ export default {
 					backgroundPosition: currentBanner.visual_alignment,
 					backgroundSize: currentBanner.visual_size, 
 					backgroundRepeat: currentBanner.visual_repeat,
+				},
+				contentClass: {
+					alignment: `banner__content--${currentBanner.text_alignment}`,
 				}
 			}
 

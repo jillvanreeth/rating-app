@@ -17,7 +17,10 @@ export default {
 
 	data() {
 		return {
-			inputData: {},
+			inputData: {
+				rating: 0,
+				percentage: 0,
+			},
 			rating: 0,
 			percentage: 0,
 		}
