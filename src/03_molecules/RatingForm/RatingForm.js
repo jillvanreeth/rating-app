@@ -17,7 +17,15 @@ export default {
 		'theRating': {
 			handler(newVal,oldVal) {
 			
-				if(newVal > 5) { this.theRating = oldVal}
+				newVal > 5 && (this.theRating = oldVal)
+				
+			}
+		},
+
+		'thePercentage': {
+			handler(newVal,oldVal) {
+			
+				newVal > 100 && (this.thePercentage = oldVal)
 				
 			}
 		}
