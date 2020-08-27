@@ -1,9 +1,10 @@
 body {
+  color: $dark;
   font-family: 'Helvetica', 'Arial', 'sans-serif';
   font-size: $fs-m;
   font-weight: normal;
   line-height: 1.35;
-	color: $dark;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -18,9 +19,9 @@ h4,
 h5,
 h6,
 p {
-	margin: 0;
-	padding: 0;
-	font-weight: inherit;
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
 }
 
 strong {

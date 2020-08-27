@@ -49,30 +49,34 @@ export default {
 
 	mounted() {
 
-		let currentBanner = this.bannerData.find(elm => elm.id == this.theId)
-		
-		this.bannerStyles = { 
-			desktop: {
-				backgroundImage: `url("img/${currentBanner.visual}")`,
-				backgroundPosition: currentBanner.visual_alignment,
-				backgroundSize: currentBanner.visual_size, 
-				backgroundRepeat: currentBanner.visual_repeat,
-			},
-			mobile: {
-				backgroundImage: currentBanner.visual_mobile && `url("img/${currentBanner.visual_mobile}")`,
-			},
-			visualClass: {
-				position: `banner__visual--${currentBanner.visual_position}`,
-			},
-			contentClass: {
-				alignment: `banner__content--${currentBanner.text_alignment}`,
-			}
-		}
+		this.setTheSettings()
 
 	}, 
 
-
 	methods: {
+
+		setTheSettings() {
+
+			let currentBanner = this.bannerData.find(elm => elm.id == this.theId)
+		
+			this.bannerStyles = { 
+				desktop: {
+					backgroundImage: `url("img/${currentBanner.visual}")`,
+					backgroundPosition: currentBanner.visual_alignment,
+					backgroundSize: currentBanner.visual_size, 
+					backgroundRepeat: currentBanner.visual_repeat,
+				},
+				mobile: {
+					backgroundImage: currentBanner.visual_mobile && `url("img/${currentBanner.visual_mobile}")`,
+				},
+				visualClass: {
+					position: `banner__visual--${currentBanner.visual_position}`,
+				},
+				contentClass: {
+					alignment: `banner__content--${currentBanner.text_alignment}`,
+				}
+			}
+		},
 
 		getWindowSize() {
 			
