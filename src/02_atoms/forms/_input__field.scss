@@ -1,0 +1,27 @@
+@import './_input__resets';
+
+.input__field {
+	display: block;
+	width: 100%;
+	height: 40px;
+	padding: 0 5px;
+	color: $dark;
+	font-size: $fs-l;
+	letter-spacing: 0;
+	border: 1px solid $neutrals-0;
+	border-radius: 0;
+	outline: none;
+	background-color: $light;
+	appearance: none;
+	box-shadow: none;
+
+	&:focus {
+		box-shadow: none;
+	}
+
+	&::placeholder {
+		color: $neutrals-0;
+		font-weight: 300;
+	}
+}
+
