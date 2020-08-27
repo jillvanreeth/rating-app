@@ -7,4 +7,23 @@
 	padding: 0;
 	flex-direction: column;
 	box-sizing: border-box;
+
+	&:before {
+		@include media('small') {
+			content: 'small';
+		}
+		@include media('medium') {
+			content: 'medium';
+		}
+		@include media('large') {
+			content: 'large';
+		}
+		@include media('xlarge') {
+			content: 'xlarge';
+		}
+
+		position: absolute;
+		left: -99999px;
+		content: 'xsmall';
+	}
 }

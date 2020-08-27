@@ -2,17 +2,20 @@
 	{
 		"id": "1",
 		"visual": "tyre-full.png",
-		"visual_alignment": "-30px -70px",
-		"visual_size": "auto 100%",
-		"text_alignment": "right",
-		"visual_repeat": "no-repeat"
+		"visual_mobile": "tyre-halve.png",
+		"visual_alignment": "-25px -80px",
+		"visual_size": "auto 115%",
+		"visual_repeat": "no-repeat",
+		"visual_position": "inline",
+		"text_alignment": "right"
 	},
 	{
 		"id": "2",
 		"visual": "bg-blizzak.jpg",
 		"visual_alignment": "center center",
 		"visual_size": "cover",
-		"text_alignment": "center",
-		"visual_repeat": "no-repeat"
+		"visual_repeat": "no-repeat",
+		"visual_position": "background",
+		"text_alignment": "center"
 	}
 ]

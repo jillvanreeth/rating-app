@@ -1,6 +1,6 @@
 <template>
 
-	<div id="app" >
+	<div id="app">
 		<main class="app__inner">
 
 			<section class="app__section">

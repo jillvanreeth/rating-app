@@ -2,15 +2,13 @@
 	<div class="banner" >
 	
 		<div class="banner__inner">
-			
-			<div class="banner__graphic" :style="bannerStyles.visual"></div>
-
-			<header :class="['banner__content', bannerStyles.contentClass ? bannerStyles.contentClass.alignment : '']">
+		
+			<header :class="['banner__content', bannerStyles.contentClass && bannerStyles.contentClass.alignment]">
 				
 				<Rating :theRating="theRating"></Rating>
 
 				<h2 class="banner__title">
-					<span class="banner__title--highlight">{{thePercentage}}%</span> 
+					<strong class="banner__title--highlight">{{thePercentage}}%</strong> 
 					of some <strong>tyre users</strong> recommend this tyre
 				</h2>
 
@@ -18,6 +16,11 @@
 					<p><strong>Score of 4.95 of 5</strong> from 220 reviews</p>
 				</aside>
 			</header>
+
+			<div 
+				:class="['banner__graphic', bannerStyles.visualClass && bannerStyles.visualClass.position]" 
+				:style="mq !== 'xsmall' || (bannerStyles.mobile && !bannerStyles.mobile.backgroundImage && mq == 'xsmall') ? bannerStyles.desktop : bannerStyles.mobile">
+			</div>
 
 		</div>
 	</div>	
