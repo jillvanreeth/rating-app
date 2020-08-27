@@ -11,10 +11,6 @@ export default {
 		RatingForm,
 	},
 
-	props: {
-		
-	},
-
 	data() {
 		return {
 			inputData: {
@@ -30,13 +26,13 @@ export default {
 
 		setRating(theRating) {
 			
-			this.inputData.rating = theRating
+			this.inputData.rating = !theRating ? 0 : theRating
 		
 		},
 
 		setPercentage(thePercentage) {
 		
-			this.inputData.percentage = thePercentage
+			this.inputData.percentage = !thePercentage ? 0 : thePercentage
 		
 		}
 	}
