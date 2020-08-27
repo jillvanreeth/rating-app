@@ -10,11 +10,11 @@
 
 .rating__symbol {
 	transition: opacity 250ms ease;
-	opacity: 0.25;
 	display: block;
 	width: 22px;
 	height: 18px;
 	padding: 0 2px;
+	opacity: .25;
 
 	svg {
 		display: block;
@@ -22,16 +22,16 @@
 		height: 100%;
 
 		path {
-			fill: $light;
 			transition: fill 250ms ease;
+			fill: $light;
 		}
 	}
-	
-	&.is-visible  {
+
+	&.is-visible {
 		opacity: 1;
-		
+
 		svg path {
 			fill: $accent-0;
-		}		
+		}
 	}
 }

@@ -1,93 +1,92 @@
 .banner {
 	position: relative;
-	background: radial-gradient(at top left, rgba(7,53,74,1) 0%, rgba(3,24,36,1) 60%); 
+	background: radial-gradient(at top left, rgba(7,53,74,1) 0%, rgba(3,24,36,1) 60%);
 }
 
 .banner__inner {
-	display: flex;
-	padding: 40px 20px;
-	flex-direction: column;
-
 	@include media('medium') {
-		padding: 70px 80px;	
 		flex-direction: row;
+		padding: 70px 80px;
 	}
+
+	display: flex;
+	flex-direction: column;
+	padding: 40px 20px;
 }
 
 .banner__graphic {
-	position: absolute;
-	top: 0; 
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-repeat: no-repeat;
-
 	@include media('small', 'max-width') {
 		&.banner__visual--inline {
 			position: relative;
 			height: 0;
+			margin-bottom: -40px;
 			padding-top: 20%;
-    	margin-bottom: -40px;
-    	background-size: auto 85%;
-    	background-position: center bottom;
+			background-position: center bottom;
+			background-size: auto 85%;
 		}
 	}
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
 }
 
 .banner__content,
-[class*="banner__content-"] {
-	color: $light;
-	position: relative;
-	z-index: 1;
-	width: 100%;
-	text-align: center;
-
+[class*='banner__content-'] {
 	@include media('small') {
 		max-width: 450px;
 
-		&[class*="-right"] { 
-			text-align: right;
+		&[class*='-right'] {
 			margin-left: auto;
+			text-align: right;
 		}
 
-		&[class*="-center"] { 
-			text-align: center;
+		&[class*='-center'] {
 			margin: 0 auto;
+			text-align: center;
 		}
 	}
-
 	@include media('medium') {
 		max-width: 560px;
-	}	
+	}
+
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	color: $light;
+	text-align: center;
 }
 
 .banner__title {
-	font-weight: 300;
-	font-size: $fs-l;
-	text-transform: uppercase;
-	letter-spacing: 5.25px;
-
 	@include media('small') {
 		font-size: $fs-xl;
 	}
+
+	font-size: $fs-l;
+	font-weight: 300;
+	letter-spacing: 5.25px;
+	text-transform: uppercase;
 }
 
 .banner__title--highlight {
-	font-size: inherit;
-	font-weight: 700;
-
 	@include media('small') {
 		font-size: $fs-xxl;
 	}
+
+	font-size: inherit;
+	font-weight: 700;
 }
 
 .banner__score {
-	font-weight: 300;
+	@include media('small') {
+		padding-top: 15px;
+		font-size: $fs-m;
+	}
+
 	padding-top: 10px;
 	font-size: $fs-s;
-
-	@include media('small') {
-		font-size: $fs-m;
-		padding-top: 15px;
-	}
+	font-weight: 300;
 }
