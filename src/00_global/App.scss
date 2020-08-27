@@ -27,3 +27,26 @@
 		content: 'xsmall';
 	}
 }
+
+.app__inner {
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1140px;
+}
+
+.app__section {
+	padding: 0 20px 50px;
+	width: 100%;
+
+	&:first-child {
+		padding-top: 50px;
+	}
+}
+
+.app__section__item {
+	padding-bottom: 50px;
+
+	&:last-child {
+		padding-bottom: 0;
+	}
+}

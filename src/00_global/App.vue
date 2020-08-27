@@ -4,16 +4,22 @@
 		<main class="app__inner">
 
 			<section class="app__section">
-				<Banner :inputData="inputData" :id="1"></Banner>
+				<div class="app__section__item">
+					<Banner :inputData="inputData" :id="1"></Banner>
+				</div>
 
-				<Banner :inputData="inputData" :id="2"></Banner>
-			
-				<RatingForm 
-					:rating="rating" 
-					:percentage="percentage" 
-					@emitRating="setRating" 
-					@emitPercentage="setPercentage">	
-				</RatingForm>
+				<div class="app__section__item">
+					<Banner :inputData="inputData" :id="2"></Banner>
+				</div>
+				
+				<div class="app__section__item">
+					<RatingForm 
+						:rating="rating" 
+						:percentage="percentage" 
+						@emitRating="setRating" 
+						@emitPercentage="setPercentage">	
+					</RatingForm>
+				</div>
 			</section>
 		
 		</main>

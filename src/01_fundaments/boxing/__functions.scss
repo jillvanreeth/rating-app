@@ -16,15 +16,15 @@
 
 @mixin media($size, $what: 'min-width', $offset: true) {
   @if type-of($size) == 'string' {
-      $size: map-get($breakpoints, $size);
+    $size: map-get($breakpoints, $size);
   }
 
   $size: make-it-px($size);
   
   @if $what == 'max-width' and $offset {
-      $size: $size - 1;
+    $size: $size - 1;
   }
   @media all and (#{$what}: $size) {
-      @content;
+    @content;
   }
 }
